@@ -148,3 +148,80 @@ function showlog(m) {
 }
 showlog(123);
 showlog("dfgj");
+const addNum = (x, y) => { return x + y; };
+const subNum = (x, y) => x - y;
+console.log(addNum(5, 7));
+console.log(subNum(5, 7));
+const student = {
+    id: 123,
+    name: "vampire",
+    age: 900,
+    tel: "0987256736",
+    move: function () {
+        return "Running";
+    }
+};
+const grandMom = {
+    id: 124,
+    name: "PP",
+    age: 90,
+    move: function () {
+        return "Crawling";
+    }
+};
+const boxer = {
+    id: 382,
+    name: "nau",
+    age: 25,
+    tel: "0987256736",
+    move: function () {
+        return "ride a bike";
+    },
+    eat: function () {
+        return "vegetables";
+    }
+};
+const pilot = {
+    id: 430,
+    name: "chanvanvit",
+    age: 20,
+    tel: "0987256736",
+    move: function () {
+        return "fly a plane";
+    },
+    eat: function () {
+        return "everything";
+    }
+};
+console.log(student.move());
+console.log(grandMom.move());
+console.log(boxer.move());
+console.log(boxer.eat());
+console.log(pilot.move());
+console.log(pilot.eat());
+//class
+class Driver {
+    constructor(id, name, age) {
+        this.id = id,
+            this.name = name,
+            this.age = age,
+        ;
+    }
+    move() {
+        return `${this.name} moves by driver`;
+    }
+    eat() {
+        return `${this.name} eats rice`;
+    }
+}
+console.clear();
+const d1 = new Driver(2343, "vam", 20);
+console.log(d1.move());
+console.log(d1.eat());
+//Generic
+// function getArray<T>(items: T[]): T[]{
+//     return new Array().concat(items)
+// }
+// let n1 = [1,2,3,4]
+// let n2 = ["A","B","C","D"]
+// console.log(getArray([n1,n2]))

@@ -170,3 +170,99 @@ function showlog(m: Number | String): void{
 showlog(123)
 showlog("dfgj")
 
+// Interface func
+interface MathFunc{
+    (x:number, y:number):number
+}
+const addNum : MathFunc = (x:number, y:number):number => {return  x+y}
+const subNum : MathFunc = (x:number, y:number):number => x - y
+
+console.log(addNum(5,7))
+console.log(subNum(5,7))
+
+// Interface classes
+interface Human{
+    id: Number,
+    name: String,
+    age: Number,
+    tel?: String,
+    move() : String,
+    eat() : String,
+}
+const student : Human = {
+    id: 123,
+    name: "vampire",
+    age: 900,
+    tel: "0987256736",
+    move: function() : String{
+        return "Running"
+    }
+}
+const grandMom : Human = {
+    id: 124,
+    name: "PP",
+    age: 90,
+    move: function() : String{
+        return "Crawling"
+    }
+}
+const boxer : Human = {
+    id: 382,
+    name: "nau",
+    age: 25,
+    tel: "0987256736",
+    move: function() : String{
+        return "ride a bike"
+    },
+    eat: function() : String{
+        return "vegetables"
+    }
+}
+const pilot : Human = {
+    id: 430,
+    name: "chanvanvit",
+    age: 20,
+    tel: "0987256736",
+    move: function() : String{
+        return "fly a plane"
+    },
+    eat: function() : String{
+        return "everything"
+    }
+}
+console.log(student.move())
+console.log(grandMom.move())
+console.log(boxer.move())
+console.log(boxer.eat())
+console.log(pilot.move())
+console.log(pilot.eat())
+
+//class
+class Driver implements Human{
+    id: Number;
+    name: String;
+    age:Number;
+    constructor(id:Number, name:String, age:Number){
+        this.id = id,
+        this.name = name,
+        this.age = age,
+    }
+    move(){
+        return `${this.name} moves by driver`;
+    }
+    eat(){
+        return `${this.name} eats rice`;
+    }
+}
+console.clear()
+const d1 = new Driver(2343,"vam",20)
+console.log(d1.move())
+console.log(d1.eat())
+//Generic
+// function getArray<T>(items: T[]): T[]{
+//     return new Array().concat(items)
+// }
+// let n1 = [1,2,3,4]
+// let n2 = ["A","B","C","D"]
+
+// console.log(getArray([n1,n2]))
