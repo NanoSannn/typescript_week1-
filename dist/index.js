@@ -166,20 +166,22 @@ console.log(addNum(5, 7));
 console.log(subNum(5, 7));
 const student = {
     id: 123,
-    name: "vampire",
-    age: 900,
-    tel: "0987256736",
+    name: "Somchai",
+    age: 30,
+    tel: "090000000",
     move: function () {
         return "Running";
-    }
+    },
+    eat: () => "Banana"
 };
 const grandMom = {
-    id: 124,
-    name: "PP",
-    age: 90,
+    id: 9,
+    name: "Pao",
+    age: 60,
     move: function () {
         return "Crawling";
-    }
+    },
+    eat: () => "Rice",
 };
 const boxer = {
     id: 382,
@@ -213,17 +215,17 @@ console.log(pilot.move());
 console.log(pilot.eat());
 //class
 class Driver {
+    //arg-constructor
     constructor(id, name, age) {
-        this.id = id,
-            this.name = name,
-            this.age = age,
-        ;
+        this.id = id;
+        this.name = name;
+        this.age = age;
     }
     move() {
-        return `${this.name} moves by driver`;
+        return `${this.name} moves by driving.`;
     }
     eat() {
-        return `${this.name} eats rice`;
+        return `${this.name} eats rice.`;
     }
 }
 console.clear();

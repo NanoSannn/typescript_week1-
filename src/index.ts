@@ -91,7 +91,7 @@ students = [
     ["1005","pp",17,31,0],
 ]
 students.forEach(p=>{
-    p[4] = p[2]+p[3];
+    p[4]=p[2]+p[3];
     console.log(`ID : ${p[0]} ${p[1]}, Total : ${p[4]}`)
 })
 
@@ -166,8 +166,8 @@ console.log(typeof(sid))
 sid="555"
 console.log(typeof(sid))
 
-function addNumber(x: Number,y: Number): Number{
-    return x + y
+function addNumber(x: number,y:number): number{
+    return x + y;
 }
 console.log(addNumber(3,5))
 // console.log(addNumber(3,"5"))
@@ -199,21 +199,24 @@ interface Human{
     eat() : String,
 }
 const student : Human = {
-    id: 123,
-    name: "vampire",
-    age: 900,
-    tel: "0987256736",
-    move: function() : String{
-        return "Running"
-    }
+    id : 123,
+    name: "Somchai",
+    age: 30,
+    tel: "090000000",
+    move: function() : string{
+        return "Running";
+    },
+    eat: () => "Banana"
 }
+
 const grandMom : Human = {
-    id: 124,
-    name: "PP",
-    age: 90,
-    move: function() : String{
-        return "Crawling"
-    }
+    id: 9,
+    name: "Pao",
+    age: 60,
+    move: function() :string{
+        return "Crawling";
+    },
+    eat: () => "Rice",
 }
 const boxer : Human = {
     id: 382,
@@ -248,20 +251,24 @@ console.log(pilot.eat())
 
 //class
 class Driver implements Human{
-    id: Number;
-    name: String;
-    age:Number;
-    constructor(id:Number, name:String, age:Number){
-        this.id = id,
-        this.name = name,
-        this.age = age,
+    id: number;
+    name: string;
+    age: number;
+
+    //arg-constructor
+    constructor(id: number, name: string, age: number){
+        this.id = id;
+        this.name = name;
+        this.age = age;
     }
+
     move(){
-        return `${this.name} moves by driver`;
+        return `${this.name} moves by driving.`;
     }
     eat(){
-        return `${this.name} eats rice`;
+        return `${this.name} eats rice.`;
     }
+
 }
 console.clear()
 const d1 = new Driver(2343,"vam",20)
