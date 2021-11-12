@@ -42,6 +42,18 @@ salary.forEach((s) => {
 console.log(commission);
 let bonus = [];
 salary.forEach((s) => {
+    if (s < 1001) {
+        bonus.push(s * 2);
+    }
+    else if (s < 5001) {
+        bonus.push(s * 1.5);
+        if (s < 10001) {
+            bonus.push(s * 1.2);
+        }
+        else {
+            bonus.push(s * 1);
+        }
+    }
 });
 console.log(bonus);
 //tuple
